@@ -37,3 +37,9 @@ BREAKING CHANGE: dropping Node 6 which hits end of life in April
 ```
 docs: correct spelling of CHANGELOG
 ```
+
+### 包含作用域的提交说明
+
+```
+feat(lang): add polish language
+```
