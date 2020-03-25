@@ -43,3 +43,13 @@ docs: correct spelling of CHANGELOG
 ```
 feat(lang): add polish language
 ```
+
+### 为 fix 编写的提交说明，包含（可选的） issue 编号
+
+```
+fix: correct minor typos in code
+
+see the issue for details on the typos fixed
+
+closes issue #12
+```
