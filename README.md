@@ -31,3 +31,9 @@ chore!: drop Node 6 from testing matrix
 
 BREAKING CHANGE: dropping Node 6 which hits end of life in April
 ```
+
+### 不包含正文的提交说明
+
+```
+docs: correct spelling of CHANGELOG
+```
