@@ -6,7 +6,7 @@
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "commit"
+    "commit": "git add . && commit"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
