@@ -1,7 +1,6 @@
 {
   "name": "conventional-commits-demo",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/youngjuning/conventional-commits-demo.git",
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
