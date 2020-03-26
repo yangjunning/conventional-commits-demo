@@ -5,12 +5,29 @@
   "repository": "https://github.com/youngjuning/conventional-commits-demo.git",
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
+  "scripts": {
+    "commit": "commit"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt-cli": "^8.3.5",
+    "@sishuguojixuefu/eslint-config": "^0.10.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.9"
   },
+  "eslintConfig": {
+    "extends": [
+      "@sishuguojixuefu"
+    ],
+    "env": {
+      "react-native/react-native": true
+    }
+  },
+  "eslintIgnore": [
+    "__tests__/App-test.tsx"
+  ],
+  "prettier": "@sishuguojixuefu/eslint-config/.prettierrc.js",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -18,7 +35,18 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{md,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
