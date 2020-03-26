@@ -1,11 +1,11 @@
 {
   "name": "conventional-commits-demo",
-  "version": "2.0.0",
+  "version": "0.0.1",
   "repository": "https://github.com/youngjuning/conventional-commits-demo.git",
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "git add . && commit",
+    "commit": "commit",
     "release": "standard-version"
   },
   "devDependencies": {
