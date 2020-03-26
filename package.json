@@ -6,23 +6,15 @@
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "git add . && git-cz"
+    "commit": "git add . && commit"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/prompt": "^8.3.5",
     "@commitlint/prompt-cli": "^8.3.5",
     "@sishuguojixuefu/eslint-config": "^0.10.0",
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.1.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.9"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
   },
   "commitlint": {
     "extends": [
