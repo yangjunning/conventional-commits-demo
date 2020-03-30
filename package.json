@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "commit",
-    "release": "standard-version && git push --tags"
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
