@@ -12,22 +12,21 @@
 [可选的脚注]
 ```
 
-### 类型
+### 类型（type）
 
-- `build:`: 影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、NPM）。
-- `chroe:`:  其他不修改`src`或`test`文件。
-- `ci:`: 更改持续集成文件和脚本（示例范围：Travis、Circle、BrowserStack、SauceLabs）。
-- `docs:`: 只是更改文档。
 - `feat:`:  类型为 `feat` 的提交表示在代码库中新增了一个功能（这和语义化版本中的 [`MINOR`](https://semver.org/lang/zh-CN/#摘要) 相对应）。 
 - `fix:`：类型为 `fix` 的 提交表示在代码库中修复了一个 bug （这和语义化版本中的 [`PATCH`](https://semver.org/lang/zh-CN/#摘要) 相对应）。
-- `improvement:`: 用于对当前实现进行改进而没有添加新功能或修复错误的提交。
-- `perf:`: 改进性能的代码更改。
-- `refactor:`: 代码重构，既不修复错误也不添加功能。
-- `revert:`: commit 回退。
+- `docs:`: 只是更改文档。
 - `style:`: 不影响代码含义的变化（空白、格式化、缺少分号等）。
+- `refactor:`: 代码重构，既不修复错误也不添加功能。
+- `perf:`: 改进性能的代码更改。
 - `test:`: 添加确实测试或更正现有的测试。 
+- `build:`: 影响构建系统或外部依赖关系的更改（示例范围：gulp、broccoli、NPM）。
+- `ci:`: 更改持续集成文件和脚本（示例范围：Travis、Circle、BrowserStack、SauceLabs）。
+- `chore:`:  其他不修改`src`或`test`文件。
+- `revert:`: commit 回退。
 
-### 范围
+### 范围（scope）
 
 可以为提交类型添加一个围在圆括号内的作用域，以为其提供额外的上下文信息。例如 `feat(parser): adds ability to parse arrays.`。
 
@@ -98,28 +97,49 @@ closes issue #12
 - 触发构建和部署流程。
 - 让人们探索一个更加结构化的提交历史，以便降低对你的项目作出贡献的难度。
 
-## commitizen
+## cz-customizable
+
+可自定义的Commitizen插件（或独立实用运行）可帮助实现一致的提交消息。
+
+独立使用 cz-customizable：
+
+```sh
+$ yarn cz-customizable -D
+```
+
+向 package.json 添加新的 scripts:
+
+```json
+{
+  "scripts" : {
+    ...
+    "commit": "./node_modules/cz-customizable/standalone.js"
+  }
+}
+```
+
+在根目录新建 `.cz-config.js` 并复制 [cz-config-EXAMPLE.js](https://github.com/leonardoanalista/cz-customizable/blob/master/cz-config-EXAMPLE.js) 到文件。
+
+效果：
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d049880526b4738ba54915d182831c4~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## commitlint
 
 commitlint检查您的提交消息是否符合[conventional commit format](https://conventionalcommits.org/)。
 
+安装 @commitlint/cli、husky 和 lint-staged：
+
 ```shell
-$ yarn add -D @commitlint/cli @commitlint/config-conventional @commitlint/prompt-cli
+$ yarn add -D @commitlint/cli
 $ yarn add -D husky lint-staged
 ```
 
+添加 git commit hooks 到 package.json：
+
 ```json
-// package.json
 {
-  "scripts": {
-    "commit": "commit"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
+  ...
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -127,6 +147,8 @@ $ yarn add -D husky lint-staged
   }
 }
 ```
+
+
 
 ## standard-version
 

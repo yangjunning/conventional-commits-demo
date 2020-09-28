@@ -5,16 +5,19 @@
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "npx cz",
-    "release": "npx standard-version"
+    "commit": "./node_modules/cz-customizable/standalone.js",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^8.3.4",
-    "husky": "^4.2.3"
+    "commitlint": "^11.0.0",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "husky": "^4.2.3",
+    "standard-version": "^9.0.0"
   }
 }
