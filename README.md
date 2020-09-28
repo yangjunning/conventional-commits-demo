@@ -128,14 +128,13 @@ $ yarn cz-customizable -D
 
 commitlint检查您的提交消息是否符合[conventional commit format](https://conventionalcommits.org/)。
 
-安装 @commitlint/cli、husky 和 lint-staged：
+1、安装 @commitlint/cli、husky 和 lint-staged
 
 ```shell
-$ yarn add -D @commitlint/cli
-$ yarn add -D husky lint-staged
+$ yarn add -D @commitlint/cli husky lint-staged
 ```
 
-添加 git commit hooks 到 package.json：
+2、添加 git commit hooks 到 package.json：
 
 ```json
 {
@@ -148,7 +147,21 @@ $ yarn add -D husky lint-staged
 }
 ```
 
+3、安装 commitlint-config-cz：
 
+commitlint-config-cz 合并 cz-customizable 的配置 `{types,scopes,scopeOverrides}` 和 commitlint 的配置 `{type-enum,scope-enum}`。这样，你就可以在一个地方维护 types 和 scopes。
+
+```shell
+$ yarn add commitlint-config-cz -D
+```
+
+4、在 `commitlint.config.js` 中用 `cz` 扩展您的 commitlint 配置：
+
+```js
+module.exports = {
+  extends: ['cz']
+};
+```
 
 ## standard-version
 
