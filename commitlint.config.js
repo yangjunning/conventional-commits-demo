@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['cz'],
+  extends: ['other-config','cz'],
   rules: {
     'scope-case': [1, 'always', 'pascal-case'],
     'subject-case': [0],
