@@ -178,6 +178,32 @@ module.exports = {
 
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c46df7e45f584f63b99b1748c5b6e743~tplv-k3u1fbpfcp-zoom-1.image)
 
+## GitHub Actions
+
+新建一个 github workflow `.github/workflows/commitlint.yml`，作用是在提交 pull_request 时，检查信息:
+
+```yml
+name: Lint Commit Messages
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm install
+      - name: Add dependencies for commitlint action
+        # $GITHUB_WORKSPACE is the path to your repository
+        run: echo "::set-env name=NODE_PATH::$GITHUB_WORKSPACE/node_modules"
+      # Now the commitlint action will run considering its own dependencies and yours as well 🚀
+      - uses: wagoid/commitlint-github-action@v2
+```
+
 ## standard-version
 
 [standard-version](https://link.zhihu.com/?target=https%3A//github.com/conventional-changelog/standard-version) 是一款遵循[语义化版本（ semver）](https://link.zhihu.com/?target=https%3A//semver.org/)和 [commit message 标准规范](https://link.zhihu.com/?target=https%3A//conventionalcommits.org/) 的版本和 changelog 自动化工具。通常情况线下，我们会在 master 分支进行如下的版本发布操作：
