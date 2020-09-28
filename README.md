@@ -168,7 +168,7 @@ module.exports = {
 [standard-version](https://link.zhihu.com/?target=https%3A//github.com/conventional-changelog/standard-version) 是一款遵循[语义化版本（ semver）](https://link.zhihu.com/?target=https%3A//semver.org/)和 [commit message 标准规范](https://link.zhihu.com/?target=https%3A//conventionalcommits.org/) 的版本和 changlog 自动化工具。通常情况线下，我们会在 master 分支进行如下的版本发布操作：
 
 1. `git pull origin master`
-2. 根据 `pacakage.json` 中的 `version` 更新版本号，更新 CHANGELOG
+2. 根据 `package.json` 中的 `version` 更新版本号，更新 CHANGELOG
 3. `git add .`
 4. `git commit`
 5. `git tag` 打版本操作
