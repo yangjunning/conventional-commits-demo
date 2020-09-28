@@ -104,16 +104,21 @@ closes issue #12
 独立使用 cz-customizable：
 
 ```sh
-$ yarn cz-customizable -D
+$ yarn add commitizen cz-customizable -D
 ```
 
-向 package.json 添加新的 scripts:
+向 package.json 添加新的 script 并添加 commitizen 配置:
 
 ```json
 {
   "scripts" : {
     ...
-    "commit": "./node_modules/cz-customizable/standalone.js"
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
 ```
