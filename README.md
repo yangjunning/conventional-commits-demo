@@ -1,3 +1,7 @@
+## 前言
+
+规范化 `git commit` 对于提高 `git log` 可读性、可控的版本控制和 changelog 生成都有着重要的作用。然而阻碍我们脚步的不只是团队的推广，单单对于一系列工具的配置都让人头大。这其中主要就是 commitlint 和 commitizen 的配合使用以及自定义提交规范。本文总结了目前的最佳实践给大家，如果有帮助，赏个star足矣。
+
 ## Conventional Commits 约定式提交规范
 
 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0-beta.4/) 是一种用于给提交信息增加人机可读含义的规范。约定式提交规范是一种基于消息的轻量级约定。它提供了一组用于创建清晰的提交历史的简单规则；这使得编写基于规范的自动化工具变得更容易。这个约定与 [SemVer](http://semver.org/) 相吻合，在提交信息中描述新特性、bug 修复和破坏性变更。
@@ -101,7 +105,7 @@ closes issue #12
 
 可自定义的Commitizen插件（或独立实用运行）可帮助实现一致的提交消息。
 
-独立使用 cz-customizable：
+安装 commitizen、cz-customizable：
 
 ```sh
 $ yarn add commitizen cz-customizable -D
@@ -167,6 +171,10 @@ module.exports = {
   extends: ['cz']
 };
 ```
+
+## vscode commitizen
+
+![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c46df7e45f584f63b99b1748c5b6e743~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## standard-version
 
