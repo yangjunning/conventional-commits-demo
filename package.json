@@ -1,54 +1,20 @@
 {
   "name": "conventional-commits-demo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/youngjuning/conventional-commits-demo.git",
   "author": "杨俊宁 <youngjuning@aliyun.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "commit",
-    "release": "standard-version"
+    "commit": "npx cz",
+    "release": "npx standard-version"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/prompt": "^11.0.0",
-    "@commitlint/prompt-cli": "^8.3.5",
-    "@sishuguojixuefu/eslint-config": "^0.10.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.9",
-    "standard-version": "^8.0.1"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "@sishuguojixuefu"
-    ],
-    "env": {
-      "react-native/react-native": true
-    }
-  },
-  "eslintIgnore": [
-    "__tests__/App-test.tsx"
-  ],
-  "prettier": "@sishuguojixuefu/eslint-config/.prettierrc.js",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "**/*.{md,json}": [
-      "prettier --write",
-      "git add"
-    ]
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3"
   }
 }
