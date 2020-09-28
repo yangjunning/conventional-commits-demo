@@ -224,7 +224,7 @@ $ yarn add -D standard-version
 ```
 
 ```json
-// package.json
+// package.json 
 {
   "scripts": {
     "release": "standard-version"
