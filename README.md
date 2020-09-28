@@ -105,13 +105,13 @@ closes issue #12
 
 可自定义的Commitizen插件（或独立实用运行）可帮助实现一致的提交消息。
 
-安装 cz-customizable
+安装 cz-customizable：
 
 ```sh
 $ yarn add cz-customizable -D
 ```
 
-向 package.json 添加新的 script 并添加 commitizen 配置:
+向 package.json 添加新的 script：
 
 ```json
 {
@@ -132,10 +132,10 @@ $ yarn add cz-customizable -D
 
 commitlint检查您的提交消息是否符合[conventional commit format](https://conventionalcommits.org/)。
 
-1、安装 @commitlint/cli、husky 和 lint-staged
+1、安装 @commitlint/cli、husky：
 
 ```shell
-$ yarn add -D @commitlint/cli husky lint-staged
+$ yarn add -D @commitlint/cli husky
 ```
 
 2、添加 git commit hooks 到 package.json：
@@ -174,11 +174,13 @@ module.exports = {
 
 ## vscode commitizen
 
+在 VS Code 中搜索装 vscode commitizen，然后就可以摆脱命令行了，而且这个插件是和前面所有的配置兼容的，效果如下：
+
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c46df7e45f584f63b99b1748c5b6e743~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## standard-version
 
-[standard-version](https://link.zhihu.com/?target=https%3A//github.com/conventional-changelog/standard-version) 是一款遵循[语义化版本（ semver）](https://link.zhihu.com/?target=https%3A//semver.org/)和 [commit message 标准规范](https://link.zhihu.com/?target=https%3A//conventionalcommits.org/) 的版本和 changlog 自动化工具。通常情况线下，我们会在 master 分支进行如下的版本发布操作：
+[standard-version](https://link.zhihu.com/?target=https%3A//github.com/conventional-changelog/standard-version) 是一款遵循[语义化版本（ semver）](https://link.zhihu.com/?target=https%3A//semver.org/)和 [commit message 标准规范](https://link.zhihu.com/?target=https%3A//conventionalcommits.org/) 的版本和 changelog 自动化工具。通常情况线下，我们会在 master 分支进行如下的版本发布操作：
 
 1. `git pull origin master`
 2. 根据 `package.json` 中的 `version` 更新版本号，更新 CHANGELOG
@@ -209,3 +211,13 @@ $ yarn add -D standard-version
 - Release as a Pre-Release：`yarn release --prerelease` or `yarn release --prerelease alpha`
 - Release as a Target Type Imperatively (`npm version`-like)：`yarn release --release-as minor` or `yarn release --release-as 1.1.0`，可以合并 `--prerelease`以此方便发布实验性特性
 - Prevent Git Hooks：`yarn release --no-verify`
+
+## Catch Me
+
+> GitHub: [youngjuning](https://github.com/youngjuning) | 微信: `yang_jun_ning` | 公众号: `前端早茶馆` | 邮箱: youngjuning@aliyun.com
+
+|                             微信                             |                             投食                             |                            公众号                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://i.loli.net/2020/02/22/q2tLiGYvhIxm3Fl.jpg" width="200px"/> | <img src="https://i.loli.net/2020/02/23/q56X1eYZuITQpsj.png" width="200px"/> | <img src="https://i.loli.net/2020/07/28/6AyutjZ1XI4aUDV.jpg" width="200px"/> |
+
+本文首发于[杨俊宁的博客](https://youngjuning.js.org/)，创作不易，您的点赞👍是我坚持的动力！！！
