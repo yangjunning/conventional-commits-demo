@@ -1,7 +1,7 @@
 module.exports = {
   types: [
     {
-      value: 'feat:zap:',
+      value: 'feat',
       name: 'feat:      新功能'
     },
     {
@@ -73,7 +73,7 @@ module.exports = {
   },
 
   allowCustomScopes: true,
-  allowBreakingChanges: ['feat:sparkles:', 'fix:bug:', 'refactor♻:recycle:'],
+  allowBreakingChanges: ['feat', 'fix:bug:', 'refactor♻:recycle:'],
 
   // limit subject length
   subjectLimit: 100,
