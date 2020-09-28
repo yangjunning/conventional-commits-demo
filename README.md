@@ -1,8 +1,5 @@
 本文以 React Native 项目为示例介绍了前端规范化开发涉及的工具及知识，但是所涉及内容具有通用性，建议读者点赞收藏(^▽^)。
 
-> 另外安利一下 [@sigmayun/react-native-template-typescript](https://github.com/sigmayun/react-native-template-typescript)，这是一个基于 typescript 的 react native 开箱即用的模板。本文所涉及的大部分内容都集成到了该模板中。
->
-> - [sishuguojixuefu/eslint-config](https://github.com/sishuguojixuefu/eslint-config)：ESLint config for sishuguojixuefu
 > - [conventional-commits-demo](https://github.com/youngjuning/conventional-commits-demo)：本文实践的配套代码库
 
 ## gitconfig
