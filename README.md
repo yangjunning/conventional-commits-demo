@@ -105,10 +105,10 @@ closes issue #12
 
 可自定义的Commitizen插件（或独立实用运行）可帮助实现一致的提交消息。
 
-安装 commitizen、cz-customizable：
+安装 cz-customizable
 
 ```sh
-$ yarn add commitizen cz-customizable -D
+$ yarn add cz-customizable -D
 ```
 
 向 package.json 添加新的 script 并添加 commitizen 配置:
@@ -117,12 +117,7 @@ $ yarn add commitizen cz-customizable -D
 {
   "scripts" : {
     ...
-    "commit": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
+    "commit": "./node_modules/cz-customizable/standalone.js"
   }
 }
 ```
@@ -168,7 +163,12 @@ $ yarn add commitlint-config-cz -D
 
 ```js
 module.exports = {
-  extends: ['cz']
+  extends: ['cz'],
+  rules: {
+    // must add these rules
+    'type-empty': [2, 'never'],
+    'subject-empty': [2, 'never']
+  }
 };
 ```
 
