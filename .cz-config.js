@@ -1,51 +1,51 @@
 module.exports = {
   types: [
     {
-      value: '✨feat',
+      value: 'feat:zap:',
       name: 'feat:      新功能'
     },
     {
-      value: '🐛fix',
+      value: 'fix:bug:',
       name: 'fix:       修复Bug'
     },
     {
-      value: '📝docs',
+      value: 'docs:memo:',
       name: 'docs:      文档变动'
     },
     {
-      value: '💄style',
+      value: 'style:lipstick:',
       name: 'style:     不影响代码含义的变化(空白、格式化、缺少分号等)'
     },
     {
-      value: '♻️refactor',
+      value: 'refactor:recycle:',
       name: 'refactor:   重构代码，既不修复错误也不添加功能'
     },
     {
-      value: '⚡️perf',
+      value: 'perf:zap:',
       name: 'perf:      性能优化'
     },
     {
-      value: '✅test',
+      value: 'test:white_check_mark:',
       name: 'test:      测试相关'
     },
     {
-      value: '🏗build',
+      value: 'build:building_construction:',
       name: 'build:       影响构建系统或外部依赖关系的更改'
     },
     {
-      value: '👷ci',
+      value: 'ci:construction_worker:',
       name: 'ci:          更改持续集成文件和脚本'
     },
     {
-      value: 'chore',
+      value: 'chore:right_anger_bubble:',
       name: 'chore:       重新打包或更新依赖工具等杂活'
     },
     {
-      value: '⏪revert',
+      value: 'revert:rewind:',
       name: 'revert:    Revert to a commit'
     },
     {
-      value: '🚧wip',
+      value: 'wip:construction:',
       name: 'wip:       Work in progress'
     },
   ],
@@ -73,7 +73,7 @@ module.exports = {
   },
 
   allowCustomScopes: true,
-  allowBreakingChanges: ['✨feat', '🐛fix', '♻️refactor'],
+  allowBreakingChanges: ['feat:sparkles:', 'fix:bug:', 'refactor♻:recycle:'],
 
   // limit subject length
   subjectLimit: 100,
