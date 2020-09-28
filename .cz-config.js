@@ -77,4 +77,4 @@ module.exports = {
 
   // limit subject length
   subjectLimit: 100,
-};
+}
