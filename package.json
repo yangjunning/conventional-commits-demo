@@ -14,6 +14,7 @@
     }
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^11.0.0",
     "commitlint": "^11.0.0",
     "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
