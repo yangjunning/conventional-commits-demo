@@ -1,6 +1,6 @@
 module.exports = {
   types: [
-    {value: 'feat',     name: 'feat:     新功能'},
+    {value: ':zap:feat',     name: 'feat:     新功能'},
     {value: 'fix',      name: 'fix:      修复Bug'},
     {value: 'docs',     name: 'docs:     文档变动'},
     {value: 'style',    name: 'style:    不影响代码含义的变化(空白、格式化、缺少分号等)'},
