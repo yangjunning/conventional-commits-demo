@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@commitlint/config-conventional','cz'],
+  extends: ['cz'],
   rules: {
     'scope-case': [1, 'always', 'pascal-case'],
     'subject-case': [0],
