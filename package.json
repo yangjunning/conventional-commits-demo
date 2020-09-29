@@ -8,7 +8,8 @@
     "commit": "./node_modules/cz-customizable/standalone.js",
     "release": "standard-version",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx}"
+    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
+    "test": "jest --passWithNoTests"
   },
   "husky": {
     "hooks": {
@@ -23,7 +24,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@commitlint/cli": "^11.0.0",
+    "@types/jest": "^26.0.14",
     "commitlint": "^11.0.0",
     "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
@@ -31,11 +34,13 @@
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "4.0.0",
     "husky": "^4.2.3",
+    "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "standard-version": "^9.0.0"

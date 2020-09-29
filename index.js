@@ -1,2 +1,3 @@
-const a = '';
-console.log('[index]', a);
+export default () => {
+  return 2;
+};

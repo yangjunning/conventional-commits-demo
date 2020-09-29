@@ -1,4 +1,4 @@
-name: ESLint
+name: Lint Code
 on: push
 jobs:
   build:
@@ -11,3 +11,5 @@ jobs:
       run: yarn format
     - name: Run ESLint
       run: yarn lint
+    - name: Run Test
+      run: yarn test
