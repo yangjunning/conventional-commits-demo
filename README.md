@@ -1,5 +1,4 @@
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000)](http://commitizen.github.io/cz-cli/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org)
-
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000)](http://commitizen.github.io/cz-cli/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org) [![Coverage Status](https://coveralls.io/repos/github/yangjunning/conventional-commits-demo/badge.svg?branch=master)](https://coveralls.io/github/yangjunning/conventional-commits-demo?branch=master) [![codecov](https://codecov.io/gh/yangjunning/conventional-commits-demo/branch/master/graph/badge.svg?token=5isBPzt8E8)](undefined)
 ## 前言
 
 规范化 `git commit` 对于提高 `git log` 可读性、可控的版本控制和 changelog 生成都有着重要的作用。然而阻碍我们脚步的不只是团队的推广，单单对于一系列工具的配置都让人头大。这其中主要就是 commitlint 和 commitizen 的配合使用以及自定义提交规范。本文总结了目前的最佳实践给大家，如果有帮助，赏个star足矣。

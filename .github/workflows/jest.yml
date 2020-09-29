@@ -1,4 +1,4 @@
-name: Lint Code
+name: Jest、codecov、coveralls
 on: push
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
         run: yarn test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
-      - name: Coveralls
+      - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
