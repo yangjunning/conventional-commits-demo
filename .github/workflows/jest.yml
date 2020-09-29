@@ -11,6 +11,8 @@ jobs:
         run: yarn test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
+        with:
+          directory: ./coverage/
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@master
         with:
