@@ -1,4 +1,4 @@
-name: Jest、codecov、coveralls
+name: Upload coverage to Codecov & Coveralls
 on: push
 jobs:
   build:
