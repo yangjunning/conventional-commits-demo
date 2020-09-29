@@ -11,7 +11,3 @@ jobs:
       run: yarn format
     - name: Run ESLint
       run: yarn lint
-    - name: Run Test
-      run: yarn test
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
