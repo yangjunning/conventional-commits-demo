@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       value: 'refactor',
-      name: 'refactor:   重构代码，既不修复错误也不添加功能',
+      name: 'refactor:  重构代码，既不修复错误也不添加功能',
     },
     {
       value: 'perf',
@@ -30,15 +30,15 @@ module.exports = {
     },
     {
       value: 'build',
-      name: 'build:       影响构建系统或外部依赖关系的更改',
+      name: 'build:     影响构建系统或外部依赖关系的更改',
     },
     {
       value: 'ci',
-      name: 'ci:          更改持续集成文件和脚本',
+      name: 'ci:        更改持续集成文件和脚本',
     },
     {
       value: 'chore',
-      name: 'chore:       重新打包或更新依赖工具等杂活',
+      name: 'chore:     重新打包或更新依赖工具等杂活',
     },
     {
       value: 'revert',
