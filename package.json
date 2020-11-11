@@ -8,7 +8,7 @@
     "commit": "git cz",
     "release": "standard-version",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
+    "format": "prettier --write **/*/*.{js,jsx,ts,tsx}",
     "test": "jest",
     "codecov": "codecov -t 492206cb-729d-4b9d-bb87-9bdd107bec8d"
   },
