@@ -1,3 +1,3 @@
 export default () => {
-  return 2;
+  console.log('tuya.');
 };
